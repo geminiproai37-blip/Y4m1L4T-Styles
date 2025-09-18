@@ -1,0 +1,134 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* Notification container styles */
+#notification-container {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 1000; /* Ensure notifications are on top of everything */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align notifications to the right */
+  max-width: 90%; /* Limit width on smaller screens */
+}
+
+.notification {
+  min-width: 250px; /* Minimum width for notifications */
+  text-align: center;
+}
+
+/* Specific adjustments for header and navbar on small screens */
+@media (max-width: 640px) {
+  header {
+    padding-top: 1.2rem; /* Further increased padding for taller header */
+    padding-bottom: 1.2rem; /* Further increased padding for taller header */
+    padding-left: 1.5rem; /* Increased padding for wider header */
+    padding-right: 1.5rem; /* Increased padding for wider header */
+  }
+  header .h-8 {
+    /* SVG icon */
+    height: 1.5rem; /* Reduced icon size */
+    width: 1.5rem; /* Reduced icon size */
+  }
+  header .text-2xl {
+    /* YamiLat title */
+    font-size: 1.5rem; /* Further increased title font size */
+  }
+  header .text-xl {
+    /* Bell, Share, Search icons */
+    font-size: 1.4rem; /* Further increased icon font size */
+  }
+  nav {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+  nav .text-xl {
+    /* Bottom nav icons */
+    font-size: 0.9rem;
+  }
+  nav .text-xs {
+    /* Bottom nav text */
+    font-size: 0.65rem;
+  }
+}
+
+/* Trailer Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+}
+
+.modal.open {
+  display: flex; /* Show when open */
+}
+
+.modal-content {
+  position: relative;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#trailer-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Estilos para botones rectangulares con texto */
+.rectangular-button {
+  background-color: #4a90e2; /* Un color de fondo distintivo */
+  color: white; /* Texto blanco para contraste */
+  padding: 10px 20px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes ligeramente redondeados */
+  font-size: 1rem; /* Tamaño de fuente legible */
+  cursor: pointer; /* Indicador de clic */
+  transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
+  text-decoration: none; /* Asegura que no haya subrayado si es un enlace */
+  display: inline-block; /* Permite padding y width/height */
+  text-align: center; /* Centra el texto */
+}
+
+.rectangular-button:hover {
+  background-color: #357ABD; /* Color más oscuro al pasar el ratón */
+}
+
+/* Custom Purple Theme Colors (added by Cline) */
+.text-purple-adult {
+  color: #800080; /* Intense Purple */
+}
+
+.bg-purple-adult {
+  background-color: #800080; /* Intense Purple */
+}
+
+.border-purple-adult {
+  border-color: #800080; /* Intense Purple */
+}
+
+.hover\:bg-purple-dark:hover {
+  background-color: #6a006a; /* Slightly darker purple for hover */
+}

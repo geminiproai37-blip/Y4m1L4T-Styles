@@ -1,0 +1,85 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* Custom purple color for 'H' in YamiH */
+.text-purple-adult {
+  color: #7b009e; /* More intense purple */
+}
+
+/* Custom class for YamiH text size */
+.text-yami-h-adult {
+  font-size: 1.1rem;
+}
+
+/* Custom class for Yami text size */
+.text-yami-adult {
+  font-size: 1.1rem;
+}
+
+/* Notification container styles */
+#notification-container {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 1000; /* Ensure notifications are on top of everything */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align notifications to the right */
+  max-width: 90%; /* Limit width on smaller screens */
+}
+
+.notification {
+  min-width: 250px; /* Minimum width for notifications */
+  text-align: center;
+}
+
+/* Specific adjustments for header and navbar on small screens */
+@media (max-width: 640px) {
+  header {
+    padding-top: 1.2rem; /* Further increased padding for taller header */
+    padding-bottom: 1.2rem; /* Further increased padding for taller header */
+    padding-left: 1.5rem; /* Increased padding for wider header */
+    padding-right: 1.5rem; /* Increased padding for wider header */
+  }
+  header .h-8 {
+    /* SVG icon */
+    height: 2.2rem; /* Further increased icon size */
+    width: 2.2rem; /* Further increased icon size */
+  }
+  header .text-2xl {
+    /* YamiLat title */
+    font-size: 1.5rem; /* Further increased title font size */
+  }
+  header .text-xl {
+    /* Bell, Share, Search icons */
+    font-size: 1.4rem; /* Further increased icon font size */
+  }
+  nav {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+  nav .text-xl {
+    /* Bottom nav icons */
+    font-size: 0.9rem;
+  }
+  nav .text-xs {
+    /* Bottom nav text */
+    font-size: 0.65rem;
+  }
+}
+
+/* Purple theme overrides for categories and tabs */
+body.purple-theme .category-metadata-container span.bg-orange-500 {
+  background-color: #4c1d95 !important; /* Dark purple for category/metadata spans (only for orange ones) */
+}
+
+body.purple-theme .tabsContainer {
+  background-color: rgba(76, 29, 149, 0.8) !important; /* Dark purple with transparency for tabs container */
+  border-color: #6d28d9 !important; /* Purple border for tabs container */
+}
+
+
+body.purple-theme .read-more-button.text-orange-500 {
+  color: #6d28d9 !important; /* Purple text for "Leer más" button */
+}
